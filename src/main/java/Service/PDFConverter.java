@@ -23,7 +23,7 @@ public class PDFConverter {
     static Map<String,List<String>> usersMap=new HashMap<>();
 
     public static File createPDF() {
-        File file = new File("newPDF.pdf");
+        File file = new File("/opt/tomcat/latest/webapps/telebot/WEB-INF/source/newPDF.pdf");
         try {
             List<User> users = JSConvertor.parse();
             PdfWriter pdfWriter = new PdfWriter("newPDF.pdf");
