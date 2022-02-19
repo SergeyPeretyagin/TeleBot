@@ -27,7 +27,7 @@ public class PDFConverter {
 //        File file = new File("newPDF.pdf");
         try {
             List<User> users = JSConvertor.parse();
-            PdfWriter pdfWriter = new PdfWriter("newPDF.pdf");
+            PdfWriter pdfWriter = new PdfWriter("/opt/tomcat/latest/webapps/telebot/WEB-INF/source/newPDF.pdf");
             float[] columnWidth = {200F, 100F, 200F};
             PdfDocument pdfDocument = new PdfDocument(pdfWriter);
             pdfDocument.addNewPage();
