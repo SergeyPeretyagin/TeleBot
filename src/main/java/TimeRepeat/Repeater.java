@@ -21,7 +21,7 @@ public class Repeater {
 //        if(Calendar.getInstance().getTime().getHours()<7){
        if(Calendar.getInstance().getTime().getHours()<=15 && Calendar.getInstance().getTime().getMinutes()<=57){
             startCalendar.set(Calendar.HOUR_OF_DAY,15);
-            startCalendar.set(Calendar.MINUTE,11);
+            startCalendar.set(Calendar.MINUTE,16);
             startCalendar.set(Calendar.SECOND,00);
         }else {
             startCalendar.set(Calendar.DATE,Calendar.getInstance().getTime().getDate()+1);
@@ -46,6 +46,11 @@ public class Repeater {
             }
         };
         timer.scheduleAtFixedRate(timerTask,startCalendar.getTime(),sec );
+       try {
+           Thread.currentThread().join();
+       } catch (InterruptedException e) {
+           e.printStackTrace();
+       }
     }
 
 }
