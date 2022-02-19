@@ -32,7 +32,8 @@ public class Bot extends TelegramLongPollingBot{
     public Bot(DefaultBotOptions defaultBotOptions) {
     }
 
-    public static void main(String[] args) throws TelegramApiException {
+//    public static void main(String[] args) throws TelegramApiException {
+    public static void start() throws TelegramApiException {
         Bot bot = new Bot(new DefaultBotOptions());
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
         telegramBotsApi.registerBot(bot);
