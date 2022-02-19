@@ -17,8 +17,8 @@ public class JSConvertor {
     public static List<User> parse() throws IOException {
         List<User> listUser = new ArrayList<>();
         JSONParser jsonParser = new JSONParser();
-//        File file = new File("/opt/tomcat/latest/webapps/telebot/WEB-INF/source/output.json");
-        File file = new File("output.json");
+        File file = new File("/opt/tomcat/latest/webapps/telebot/WEB-INF/source/output.json");
+//        File file = new File("output.json");
         try (FileReader fileReader = new FileReader(file)) {
             try {
                 JSONObject object = (JSONObject) jsonParser.parse(fileReader);

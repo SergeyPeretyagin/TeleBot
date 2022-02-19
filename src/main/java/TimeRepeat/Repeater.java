@@ -20,8 +20,8 @@ public class Repeater {
 
 //        if(Calendar.getInstance().getTime().getHours()<7){
        if(Calendar.getInstance().getTime().getHours()<=15 && Calendar.getInstance().getTime().getMinutes()<=57){
-            startCalendar.set(Calendar.HOUR_OF_DAY,14);
-            startCalendar.set(Calendar.MINUTE,59);
+            startCalendar.set(Calendar.HOUR_OF_DAY,15);
+            startCalendar.set(Calendar.MINUTE,03);
             startCalendar.set(Calendar.SECOND,00);
         }else {
             startCalendar.set(Calendar.DATE,Calendar.getInstance().getTime().getDate()+1);
