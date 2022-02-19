@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 @WebServlet("/")
 public class Servlet extends HttpServlet {
     @Override
@@ -18,6 +20,9 @@ public class Servlet extends HttpServlet {
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
+        resp.setContentType("text/html");
+        PrintWriter out = resp.getWriter();
+        out.println("AAAAAAAAAAAAAAAA");
     }
 
     @Override
